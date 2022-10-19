@@ -13,13 +13,13 @@ export default function BadgeCard() {
     }
 
     return (
-            <div className="bg-white rounded-lg w-40 h-60 px-4 py-4 grid flex justify-center hover:scale-105 transition duration-300">
+            <div className="bg-white rounded-lg w-40 h-60 px-4 py-4 grid flex justify-center hover:scale-110 hover:-translate-y-1 ease-in-out delay-150 transition duration-300">
                 <div class="rounded-full bg-gray-200 flex items-center justify-center font-mono w-28 h-28 lg:w-28 lg:h-28"></div>
                 <div class="rounded-md bg-gray-200 font-mono w-30 h-5 lg:w-30 lg:h-5"></div>
                     <button
                     type="button"
                     onClick={openModal}
-                    className="rounded-md px-2 py-1 text-sm bg-blue-100 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition duration-300"
+                    className="rounded-md px-2 py-1 text-sm bg-blue-100 font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition duration-300"
                     >
                     See more
                     </button>
@@ -52,20 +52,27 @@ export default function BadgeCard() {
                             <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                             <Dialog.Title
                                 as="h3"
-                                className="text-lg font-medium leading-6 text-gray-900"
+                                className="text-lg font-medium text-center leading-6 text-gray-900"
                             >
                                 Badge Title
                             </Dialog.Title>
-                            <div className="mt-2">
-                                <p className="text-sm text-gray-500">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae congue mauris rhoncus aenean vel elit. Turpis massa sed elementum tempus egestas sed sed risus pretium. Nunc id cursus metus aliquam eleifend mi in nulla.
+                            <div className='flex justify-center mt-4'>
+                                <div className="rounded-full bg-gray-200 flex items-center justify-center font-mono w-28 h-28 lg:w-28 lg:h-28"></div>
+                            </div>
+                            <div className="mt-4">
+                                <p className="text-sm text-gray-500 overflow-y-scroll prose h-32">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                Blandit volutpat maecenas volutpat blandit aliquam etiam. Neque vitae tempus quam pellentesque nec nam aliquam sem. 
+                                Tincidunt augue interdum velit euismod in. Ut morbi tincidunt augue interdum velit euismod in. 
+                                Sit amet nulla facilisi morbi tempus. Volutpat diam ut venenatis tellus in metus vulputate. 
+                                Dui ut ornare lectus sit amet. Faucibus scelerisque eleifend donec pretium vulputate sapien. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
                                 </p>
                             </div>
 
                             <div className="mt-4">
                                 <button
                                 type="button"
-                                className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition duration-300"
+                                className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm hover:-translate-y-1 ease-in-out delay-150 font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition duration-300"
                                 onClick={closeModal}
                                 >
                                 Got it, thanks!
