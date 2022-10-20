@@ -60,12 +60,9 @@ export default function BadgeCard() {
                                 <div className="rounded-full bg-gray-200 flex items-center justify-center font-mono w-28 h-28 lg:w-28 lg:h-28"></div>
                             </div>
                             <div className="mt-4">
-                                <p className="text-sm text-gray-500 overflow-y-scroll prose h-32">
+                                <p className="text-sm text-gray-500 overflow-y-auto prose h-32">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                 Blandit volutpat maecenas volutpat blandit aliquam etiam. Neque vitae tempus quam pellentesque nec nam aliquam sem. 
-                                Tincidunt augue interdum velit euismod in. Ut morbi tincidunt augue interdum velit euismod in. 
-                                Sit amet nulla facilisi morbi tempus. Volutpat diam ut venenatis tellus in metus vulputate. 
-                                Dui ut ornare lectus sit amet. Faucibus scelerisque eleifend donec pretium vulputate sapien. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.
                                 </p>
                             </div>
 
