@@ -4,7 +4,7 @@ function NavLink({ to, children }) {
   return (
     <a
       href={to}
-      className={`mx-4 hover:bg-gray-300 px-3 py-2 rounded-lg transition duration-500 font-sans font-normal`}
+      className={`mx-4 hover:bg-gray-300 px-3 py-2 rounded-lg transition duration-500 font-sans font-medium text-slate-700 hover:text-slate-900`}
     >
       {children}
     </a>

@@ -18,12 +18,12 @@ export default function ProfileLeft() {
         <div class="rounded-md bg-red-300 mt-2 font-mono w-full h-3"></div>
         <div className="grid lg:justify-center">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-6 lg:mt-10">
-            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-16 bg-cyan-900 rounded-lg"></div>
-            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-16 bg-cyan-900 rounded-lg"></div>
+            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-16 bg-cyan-900 rounded-xl"></div>
+            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-16 bg-cyan-900 rounded-xl"></div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-4">
-            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-16 bg-cyan-900 rounded-lg"></div>
-            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-16 bg-cyan-900 rounded-lg"></div>
+            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-16 bg-cyan-900 rounded-xl"></div>
+            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-16 bg-cyan-900 rounded-xl"></div>
           </div>
         </div>
       </div>
