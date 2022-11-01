@@ -78,9 +78,9 @@ export default function NavbarNew() {
                             href="#"
                             className={classNames(
                               active
-                                ? "bg-gray-100 rounded-lg mx-2 transition duration-200"
+                                ? "bg-gray-100 rounded-lg transition duration-200"
                                 : "",
-                              "block px-4 py-2 text-sm text-gray-700"
+                              "block px-2 py-2 mx-2 text-sm text-gray-700"
                             )}
                           >
                             Your Profile
@@ -93,9 +93,9 @@ export default function NavbarNew() {
                             href="#"
                             className={classNames(
                               active
-                                ? "bg-gray-100 rounded-lg mx-2 transition duration-200"
+                                ? "bg-gray-100 rounded-lg transition duration-200"
                                 : "",
-                              "block px-4 py-2 text-sm text-gray-700"
+                              "block px-2 py-2 mx-2 text-sm text-gray-700"
                             )}
                           >
                             Settings
@@ -108,9 +108,9 @@ export default function NavbarNew() {
                             href="#"
                             className={classNames(
                               active
-                                ? "bg-gray-100 rounded-lg mx-2 transition duration-200"
+                                ? "bg-gray-100 rounded-lg transition duration-200"
                                 : "",
-                              "block px-4 py-2 text-sm text-gray-700"
+                              "block px-2 py-2 mx-2 text-sm text-gray-700"
                             )}
                           >
                             Sign out
