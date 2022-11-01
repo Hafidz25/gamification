@@ -22,16 +22,20 @@ export default function NavbarNew() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="flex flex-1 items-stretch justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="block h-6 w-auto lg:hidden"
-                    src="/logo-new.png"
-                    alt="Mejakita"
-                  />
-                  <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="/logo-new.png"
-                    alt="Mejakita"
-                  />
+                  <a href="/">
+                    <img
+                      className="block h-6 w-auto lg:hidden"
+                      src="/logo-new.png"
+                      alt="Mejakita"
+                    />
+                  </a>
+                  <a href="/">
+                    <img
+                      className="hidden h-8 w-auto lg:block"
+                      src="/logo-new.png"
+                      alt="Mejakita"
+                    />
+                  </a>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
