@@ -19,7 +19,7 @@ export default function BadgeCardProfile() {
       <button
         type="button"
         onClick={openModal}
-        className="rounded-md px-2 py-1 text-sm bg-blue-100 font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition duration-300"
+        className="rounded-md px-2 text-sm bg-blue-100 font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition duration-300"
       >
         See more
       </button>
