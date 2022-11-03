@@ -13,7 +13,7 @@ export default function BadgeCard() {
   }
 
   return (
-    <div className="bg-cyan-900 rounded-lg w-56 h-36 px-4 py-4 grid flex justify-items-center gap-2">
+    <div className="bg-cyan-900 rounded-lg w-56 h-40 px-4 py-4 grid flex justify-items-center gap-2">
       <div class="rounded-full bg-gray-200 flex font-mono w-20 h-20 lg:w-20 lg:h-20"></div>
       {/* <div class="rounded-md bg-gray-200 font-mono w-30 h-5 lg:w-30 lg:h-5"></div> */}
       <button

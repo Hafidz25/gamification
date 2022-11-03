@@ -93,21 +93,6 @@ export default function NavbarNew() {
                               "block px-2 py-2 mx-2 text-sm text-gray-700"
                             )}
                           >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active
-                                ? "bg-gray-100 rounded-lg transition duration-200"
-                                : "",
-                              "block px-2 py-2 mx-2 text-sm text-gray-700"
-                            )}
-                          >
                             Sign out
                           </a>
                         )}
