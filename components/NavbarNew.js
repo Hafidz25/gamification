@@ -32,13 +32,15 @@ export default function NavbarNew() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                  type="button"
-                  className="rounded-full p-1 text-gray-400 hover:text-slate-700 transition duration-300"
-                >
-                  <span className="sr-only">View history</span>
-                  <ClockIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                <a href="/history">
+                  <button
+                    type="button"
+                    className="rounded-full p-1 text-gray-400 hover:text-slate-700 transition duration-300"
+                  >
+                    <span className="sr-only">View history</span>
+                    <ClockIcon className="h-6 w-6" aria-hidden="true" />
+                  </button>
+                </a>
                 <button
                   type="button"
                   className="rounded-full p-1 text-gray-400 hover:text-slate-700 transition duration-300"

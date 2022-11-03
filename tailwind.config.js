@@ -6,10 +6,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        128: "30rem",
+        156: "42rem",
+      },
+    },
   },
-  plugins: [
-    require("flowbite/plugin"),
-    require('@tailwindcss/typography')
-  ],
-}
+  plugins: [require("flowbite/plugin"), require("@tailwindcss/typography")],
+};
