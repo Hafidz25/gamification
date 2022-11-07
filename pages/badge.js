@@ -1,9 +1,14 @@
+import Head from "next/head";
 import BadgeCard from "../components/BadgeCard";
 import BadgeCardRegular from "../components/BadgeCardRegular";
 
 export default function Badge() {
   return (
     <div className="container mx-auto px-10 mt-8 mb-8 py-4">
+      <Head>
+        <title>Gamification - Badge</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className="bg-white rounded-lg w-full h-full px-8 py-8 shadow-lg grid">
         <div className="rounded-lg bg-gray-200 flex p-4 w-full h-20"></div>
         {/* Features Badges */}

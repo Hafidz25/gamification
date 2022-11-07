@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { Disclosure, Menu, Transition, Dialog } from "@headlessui/react";
-import { UserIcon, ClockIcon, BellIcon } from "@heroicons/react/24/solid";
+import { UserIcon, ClockIcon, TrophyIcon } from "@heroicons/react/24/solid";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -41,13 +41,15 @@ export default function NavbarNew() {
                     <ClockIcon className="h-6 w-6" aria-hidden="true" />
                   </button>
                 </a>
-                <button
-                  type="button"
-                  className="rounded-full p-1 text-gray-400 hover:text-slate-700 transition duration-300"
-                >
-                  <span className="sr-only">View notif</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                <a href="/badge">
+                  <button
+                    type="button"
+                    className="rounded-full p-1 text-gray-400 hover:text-slate-700 transition duration-300"
+                  >
+                    <span className="sr-only">View badges</span>
+                    <TrophyIcon className="h-6 w-6" aria-hidden="true" />
+                  </button>
+                </a>
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
