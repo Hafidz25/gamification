@@ -1,0 +1,18 @@
+{
+    "user": [
+        {
+            "id": 1,
+            "name": "Hafidz",
+            "badge_point": 1028,
+            "exp_point": 2908,
+            "created_at": "2022-7-11"
+        },
+        {
+            "id": 2,
+            "name": "Si Anjing",
+            "badge_point": 828,
+            "exp_point": 908,
+            "created_at": "2022-7-11"
+        }
+    ]
+}

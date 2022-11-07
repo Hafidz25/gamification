@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
-import { useState } from "react";
 import ProfileLeft from "../components/ProfileLeft";
 import ProfileRight from "../components/ProfileRight";
 
