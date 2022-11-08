@@ -7,7 +7,7 @@ export default function Badge() {
     <div className="container mx-auto px-10 mt-8 mb-8 py-4">
       <Head>
         <title>Gamification - Badge</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="bg-white rounded-lg w-full h-full px-8 py-8 shadow-lg grid">
         <div className="rounded-lg bg-gray-200 flex p-4 w-full h-20"></div>
