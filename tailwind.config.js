@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: [
     "./node_modules/flowbite-react/**/*.js",
@@ -10,6 +11,9 @@ module.exports = {
       spacing: {
         128: "30rem",
         156: "42rem",
+      },
+      fontFamily: {
+        Poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
     },
   },

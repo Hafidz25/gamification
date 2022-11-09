@@ -5,8 +5,7 @@ import NavbarNew from "../components/NavbarNew";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      <NavbarNew />
+    <div className="font-Poppins">
       <Component {...pageProps} />
     </div>
   );
