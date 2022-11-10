@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import HistoryList from "../components/HistoryList";
 import NavbarNew from "../components/NavbarNew";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
-
 import fsPromises from "fs/promises";
 import path from "path";
+
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath);
