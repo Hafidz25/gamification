@@ -35,10 +35,6 @@ export default function ProfileRight({ props }) {
           <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
           <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
           <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
         </div>
       </div>
       <div className="bg-white rounded-lg p-4 lg:p-6 w-full mt-2 lg:mt-6">
