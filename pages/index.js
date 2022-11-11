@@ -2,12 +2,25 @@ import Head from "next/head";
 import NavbarNew from "../components/NavbarNew";
 import ProfileLeft from "../components/ProfileLeft";
 import ProfileRight from "../components/ProfileRight";
+import fsPromises from "fs/promises";
+import path from "path";
 
-export default function Index() {
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), "data.json");
+  const jsonData = await fsPromises.readFile(filePath);
+  const objectData = JSON.parse(jsonData);
+
+  return {
+    props: objectData,
+  };
+}
+
+export default function Index(props) {
+  const userTrans = props.user_transactions;
   return (
     <div>
       <Head>
-        <title>Gamification - Home</title>
+        <title>Gamification - Dashboard</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="relative">
@@ -21,7 +34,7 @@ export default function Index() {
             <ProfileLeft />
           </div>
           <div className="lg:col-span-8 col-span-1">
-            <ProfileRight />
+            <ProfileRight props={userTrans} />
           </div>
         </div>
       </div>

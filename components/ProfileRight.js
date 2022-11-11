@@ -1,33 +1,64 @@
-import BadgeCardProfile from "./BadgeCardProfile";
+import HistoryListProfile from "../components/HistoryListProfile";
 
-export default function ProfileRight() {
+export default function ProfileRight({ props }) {
   return (
     <div className="bg-gray-200 rounded-lg shadow-lg p-2 lg:p-6 h-full">
-      <div className="rounded-lg bg-white flex items-center p-4 lg:p-8 w-full ">
-        <h1 className="text-xl lg:text-2xl font-medium">Koleksi Lencana</h1>
-        <a href="/badge">
-          <div className="bg-cyan-700 flex items-center ml-6 text-white p-2 rounded-lg text-xs lg:text-sm cursor-pointer outline outline-1 hover:outline-cyan-700 hover:bg-white hover:text-cyan-700 transition duration-200">
-            Tampilkan semua
-          </div>
-        </a>
+      <div className="rounded-lg bg-white p-4 lg:p-6 w-full">
+        <div className="flex">
+          <h1 className="text-lg lg:text-xl font-medium">Koleksi Lencana</h1>
+          <a href="/badge">
+            <div className="bg-cyan-700 flex items-center ml-6 text-white p-2 rounded-lg text-xs cursor-pointer outline outline-1 hover:outline-cyan-700 hover:bg-white hover:text-cyan-700 transition duration-200">
+              Lihat katalog
+            </div>
+          </a>
+        </div>
+        <div className="grid justify-items-center grid-cols-4 lg:grid-cols-6 mt-4 gap-2 lg:gap-4 border-2 border-slate-300 p-2 lg:p-4 rounded-lg h-44 overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded">
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+        </div>
       </div>
-      <div className="rounded-lg bg-gray-200 flex w-full h-auto mt-4 lg:mt-6 items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 w-full">
-          <div className="col-span-2 flex justify-center">
-            <BadgeCardProfile />
-          </div>
-          <div className="col-span-2 flex justify-center">
-            <BadgeCardProfile />
-          </div>
-          <div className="col-span-2 flex justify-center">
-            <BadgeCardProfile />
-          </div>
-          <div className="col-span-2 flex justify-center">
-            <BadgeCardProfile />
-          </div>
-          <div className="col-span-2 flex justify-center">
-            <BadgeCardProfile />
-          </div>
+      <div className="bg-white rounded-lg p-4 lg:p-6 w-full mt-2 lg:mt-6">
+        <div className="flex">
+          <h1 className="text-lg lg:text-xl font-medium">History</h1>
+          <a href="/history">
+            <div className="bg-cyan-700 flex items-center ml-6 text-white p-2 rounded-lg text-xs cursor-pointer outline outline-1 hover:outline-cyan-700 hover:bg-white hover:text-cyan-700 transition duration-200">
+              Lihat semua
+            </div>
+          </a>
+        </div>
+        <div className="overflow-y-auto h-36 w-full lg:scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded grid gap-2 lg:gap-4 mt-2 lg:mt-6">
+          {props.map((data) => (
+            <HistoryListProfile
+              item={{
+                point_change: data.point_change,
+                date: data.created_at,
+              }}
+            />
+          ))}
         </div>
       </div>
     </div>
