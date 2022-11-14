@@ -7,7 +7,7 @@ export default function ProfileRight({ props }) {
         <div className="flex justify-between">
           <h1 className="text-lg lg:text-xl font-medium">Koleksi Lencana</h1>
           <a href="/badge">
-            <div className="bg-cyan-700 flex items-center ml-6 text-white p-2 rounded-lg text-xs cursor-pointer outline outline-1 hover:outline-cyan-700 hover:bg-white hover:text-cyan-700 transition duration-200">
+            <div className="bg-cyan-700 flex items-center text-white p-2 rounded-lg text-xs cursor-pointer outline outline-1 hover:outline-cyan-700 hover:bg-white hover:text-cyan-700 transition duration-200">
               Lihat katalog
             </div>
           </a>
@@ -41,7 +41,7 @@ export default function ProfileRight({ props }) {
         <div className="flex justify-between">
           <h1 className="text-lg lg:text-xl font-medium">History</h1>
           <a href="/history">
-            <div className="bg-cyan-700 flex items-center ml-6 text-white p-2 rounded-lg text-xs cursor-pointer outline outline-1 hover:outline-cyan-700 hover:bg-white hover:text-cyan-700 transition duration-200">
+            <div className="bg-cyan-700 flex items-center text-white p-2 rounded-lg text-xs cursor-pointer outline outline-1 hover:outline-cyan-700 hover:bg-white hover:text-cyan-700 transition duration-200">
               Lihat semua
             </div>
           </a>

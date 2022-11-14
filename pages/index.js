@@ -28,7 +28,7 @@ export default function Index(props) {
           <NavbarNew />
         </div>
       </div>
-      <div className="container mx-auto px-4 lg:px-10 mt-16 lg:mt-20 py-4">
+      <div className="container mx-auto px-4 lg:px-10 mt-10 lg:mt-20 py-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full py-8">
           <div className="lg:col-span-4 col-span-1">
             <ProfileLeft />

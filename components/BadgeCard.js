@@ -13,13 +13,13 @@ export default function BadgeCard() {
   }
 
   return (
-    <div className="bg-cyan-900 rounded-lg w-56 h-40 px-4 py-4 grid flex justify-items-center gap-2">
-      <div class="rounded-full bg-gray-200 flex font-mono w-20 h-20 lg:w-20 lg:h-20"></div>
+    <div className="bg-cyan-900 rounded-lg w-56 h-40 px-4 py-4 grid justify-items-center gap-2">
+      <div class="rounded-full bg-gray-200 w-20 h-20 lg:w-20 lg:h-20"></div>
       {/* <div class="rounded-md bg-gray-200 font-mono w-30 h-5 lg:w-30 lg:h-5"></div> */}
       <button
         type="button"
         onClick={openModal}
-        className="rounded-md px-8 py-1 text-sm bg-blue-100 font-medium text-sm text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition duration-300"
+        className="rounded-md px-8 py-1 bg-blue-100 font-medium text-sm text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition duration-300"
       >
         See more
       </button>

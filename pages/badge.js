@@ -16,13 +16,13 @@ export default function Badge() {
           <NavbarNew />
         </div>
       </div>
-      <div className="container mx-auto px-4 lg:px-10 mt-24 mb-4 py-4">
+      <div className="container mx-auto px-4 lg:px-10 mt-16 lg:mt-24 mb-4 py-4">
         <div className="bg-gray-200 rounded-lg w-full h-full p-2 lg:p-6 shadow-lg grid">
-          <div className="rounded-lg bg-white flex p-4 w-full p-4 lg:p-8 flex">
+          <div className="rounded-lg bg-white flex w-full p-4 lg:p-8">
             <a href="/">
               <button
                 type="button"
-                className="rounded-full p-1 text-gray-400 hover:text-slate-700 transition duration-300"
+                className="rounded-full p-1 text-gray-400 hover:text-slate-900 transition duration-300"
               >
                 <ArrowLeftIcon className="h-6 w-6" aria-hidden="true" />
               </button>
