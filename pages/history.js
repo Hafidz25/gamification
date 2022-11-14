@@ -30,8 +30,8 @@ export default function History(props) {
           <NavbarNew />
         </div>
       </div>
-      <div className="container mx-auto px-10 mt-24 mb-8 py-4">
-        <div className="bg-gray-200 rounded-lg w-full h-5/6 lg:h-128 px-4 py-4 lg:px-8 lg:py-8 shadow-lg grid">
+      <div className="container mx-auto px-4 lg:px-10 mt-24 mb-8 py-4">
+        <div className="bg-gray-200 rounded-lg w-full h-5/6 lg:h-128 p-2 lg:p-6 shadow-lg grid">
           <div className="rounded-lg bg-white flex p-4 w-full p-4 lg:p-8 flex">
             <a href="/">
               <button

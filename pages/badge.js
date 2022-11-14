@@ -2,6 +2,7 @@ import Head from "next/head";
 import BadgeCard from "../components/BadgeCard";
 import BadgeCardRegular from "../components/BadgeCardRegular";
 import NavbarNew from "../components/NavbarNew";
+import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 export default function Badge() {
   return (
@@ -15,9 +16,21 @@ export default function Badge() {
           <NavbarNew />
         </div>
       </div>
-      <div className="container mx-auto px-10 mt-24 mb-8 py-4">
-        <div className="bg-white rounded-lg w-full h-full px-8 py-8 shadow-lg grid">
-          <div className="rounded-lg bg-gray-200 flex p-4 w-full h-20"></div>
+      <div className="container mx-auto px-4 lg:px-10 mt-24 mb-4 py-4">
+        <div className="bg-gray-200 rounded-lg w-full h-full p-2 lg:p-6 shadow-lg grid">
+          <div className="rounded-lg bg-white flex p-4 w-full p-4 lg:p-8 flex">
+            <a href="/">
+              <button
+                type="button"
+                className="rounded-full p-1 text-gray-400 hover:text-slate-700 transition duration-300"
+              >
+                <ArrowLeftIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </a>
+            <h1 className="text-xl lg:text-2xl font-medium ml-4 lg:ml-6">
+              Badges
+            </h1>
+          </div>
           {/* Features Badges */}
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-2 w-full mt-8">
             <div className="col-span-2 flex justify-center">
@@ -38,8 +51,8 @@ export default function Badge() {
           </div>
           {/* LIne */}
           <div class="inline-flex justify-center items-center w-full mt-8">
-            <hr class="my-8 w-64 h-1 bg-gray-200 rounded border-0 dark:bg-gray-700"></hr>
-            <div class="absolute left-1/2 px-4 bg-white -translate-x-1/2 dark:bg-gray-900">
+            <hr class="my-8 w-64 h-1 bg-gray-700 rounded border-0"></hr>
+            <div class="absolute left-1/2 px-4 bg-gray-200 -translate-x-1/2">
               <svg
                 aria-hidden="true"
                 class="w-5 h-5 text-gray-700 dark:text-gray-300"

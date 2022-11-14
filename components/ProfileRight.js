@@ -4,7 +4,7 @@ export default function ProfileRight({ props }) {
   return (
     <div className="bg-gray-200 rounded-lg shadow-lg p-2 lg:p-6 h-full">
       <div className="rounded-lg bg-white p-4 lg:p-6 w-full">
-        <div className="flex">
+        <div className="flex justify-between">
           <h1 className="text-lg lg:text-xl font-medium">Koleksi Lencana</h1>
           <a href="/badge">
             <div className="bg-cyan-700 flex items-center ml-6 text-white p-2 rounded-lg text-xs cursor-pointer outline outline-1 hover:outline-cyan-700 hover:bg-white hover:text-cyan-700 transition duration-200">
@@ -38,7 +38,7 @@ export default function ProfileRight({ props }) {
         </div>
       </div>
       <div className="bg-white rounded-lg p-4 lg:p-6 w-full mt-2 lg:mt-6">
-        <div className="flex">
+        <div className="flex justify-between">
           <h1 className="text-lg lg:text-xl font-medium">History</h1>
           <a href="/history">
             <div className="bg-cyan-700 flex items-center ml-6 text-white p-2 rounded-lg text-xs cursor-pointer outline outline-1 hover:outline-cyan-700 hover:bg-white hover:text-cyan-700 transition duration-200">
