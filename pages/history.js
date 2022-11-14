@@ -45,7 +45,7 @@ export default function History(props) {
               History
             </h1>
           </div>
-          <div className="overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 scrollbar-thumb-rounded grid gap-4 lg:gap-8 mt-8">
+          <div className="overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 scrollbar-thumb-rounded grid gap-2 lg:gap-8 mt-4 lg:mt-8">
             {userTrans.map((data) => (
               <HistoryList
                 item={{
