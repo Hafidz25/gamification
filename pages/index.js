@@ -17,6 +17,7 @@ export async function getStaticProps() {
 
 export default function Index(props) {
   const userTrans = props.user_transactions;
+  const data = props;
   return (
     <div>
       <Head>
@@ -31,7 +32,7 @@ export default function Index(props) {
       <div className="container mx-auto px-4 lg:px-10 mt-10 lg:mt-20 py-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full py-8">
           <div className="lg:col-span-4 col-span-1">
-            <ProfileLeft />
+            <ProfileLeft props={data} />
           </div>
           <div className="lg:col-span-8 col-span-1">
             <ProfileRight props={userTrans} />

@@ -18,6 +18,9 @@ export async function getStaticProps() {
 
 export default function History(props) {
   const userTrans = props.user_transactions;
+  const userHistory = userTrans.filter((obj) => {
+    return obj.user_id === 2;
+  });
 
   return (
     <div>
@@ -46,11 +49,12 @@ export default function History(props) {
             </h1>
           </div>
           <div className="overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 scrollbar-thumb-rounded grid gap-2 lg:gap-8 mt-4 lg:mt-8">
-            {userTrans.map((data) => (
+            {userHistory.map((data) => (
               <HistoryList
                 item={{
                   point_change: data.point_change,
                   date: data.created_at,
+                  status: data.status,
                 }}
               />
             ))}

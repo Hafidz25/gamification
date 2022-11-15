@@ -8,17 +8,29 @@ export default function HistoryList({ item }) {
         </div>
         <div className="col-span-6 lg:col-span-10">
           <div className="ml-2 lg:ml-0 rounded-md flex items-center w-36 h-6 lg:w-96 lg:h-8">
-            <h4 className="font-normal text-xs lg:text-lg">
-              Selamat anda mendapatkan poin
-            </h4>
+            {item.status == 1 ? (
+              <h4 className="font-normal text-xs lg:text-lg">
+                Selamat anda mendapatkan poin
+              </h4>
+            ) : (
+              <h4 className="font-normal text-xs lg:text-lg">
+                Anda menggunakan poin
+              </h4>
+            )}
           </div>
         </div>
         <div className="col-span-4 lg:col-span-1 pl-6 lg:pl-0">
           <div className="grid">
             <div className="rounded-md w-20 h-4 lg:w-20 lg:h-6">
-              <div className="font-medium text-xs lg:text-lg text-green-600">
-                +{item.point_change}
-              </div>
+              {item.status == 1 ? (
+                <div className="font-medium text-xs lg:text-lg text-green-600">
+                  +{item.point_change}
+                </div>
+              ) : (
+                <div className="font-medium text-xs lg:text-lg text-red-600">
+                  -{item.point_change}
+                </div>
+              )}
             </div>
             <div className="rounded-md w-20 h-2 lg:w-24 lg:h-4 mt-0 lg:mt-1">
               <span className="text-xs font-thin lg:text-sm text-slate-600">
