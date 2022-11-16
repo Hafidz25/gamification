@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import InfoLevel from "./InfoLevel";
+import MinLevel from "./MinLevel";
 import ProgressBar from "./ProgressBar";
 
 export default function ProfileLeft({ props }) {
   const [level, setLevel] = useState(null);
-  const [progress, setProgress] = useState(null);
 
   const userData = props.user.filter((obj) => {
     return obj.id === 2;
@@ -11,12 +12,16 @@ export default function ProfileLeft({ props }) {
   const data = userData[0];
 
   useEffect(() => {
-    if (data.exp_point <= 250) {
+    if (data.exp_point < 250) {
       setLevel(1);
-    } else if (data.exp_point > 250 && data.exp_point <= 500) {
+    } else if (data.exp_point < 500) {
       setLevel(2);
-    } else if (data.exp_point > 500 && data.exp_point <= 1000) {
+    } else if (data.exp_point < 1000) {
       setLevel(3);
+    } else if (data.exp_point < 2000) {
+      setLevel(4);
+    } else if (data.exp_point < 4000) {
+      setLevel(5);
     }
   }, []);
 
@@ -44,8 +49,19 @@ export default function ProfileLeft({ props }) {
         </div>
       </div>
       <div className="rounded-lg bg-white mx-1 lg:mx-1 px-4 py-6 mt-4 lg:mt-6 w-auto h-auto">
-        <div class="rounded-md font-medium">Level {level}</div>
-        <div class="rounded-md bg-gray-300 mt-2 w-full h-3">
+        <div className="flex items-center">
+          <div class="rounded-md font-medium">Level {level}</div>
+          {level ? (
+            <InfoLevel
+              item={{
+                exp: data.exp_point,
+                lvl: level,
+              }}
+            />
+          ) : null}
+        </div>
+        <span className="text-xs ml-2 mt-2">{data.exp_point} XP</span>
+        <div class="rounded-md bg-gray-300 w-full h-3">
           {level ? (
             <ProgressBar
               item={{
@@ -55,7 +71,15 @@ export default function ProfileLeft({ props }) {
             />
           ) : null}
         </div>
-        <span className="text-xs ml-2">{data.exp_point} XP</span>
+        {level ? (
+          <MinLevel
+            item={{
+              exp: data.exp_point,
+              lvl: level,
+              fontSize: "12px",
+            }}
+          />
+        ) : null}
         <div className="grid lg:justify-center">
           {/* BadgeProfile */}
           <div className="grid grid-cols-1 w-auto lg:grid-cols-12 gap-4 mt-6 lg:mt-10">
