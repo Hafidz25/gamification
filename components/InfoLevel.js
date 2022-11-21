@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { InformationCircleIcon } from "@heroicons/react/24/solid";
-import StepBar from "./StepBar";
+import { StepBar1, StepBar2, StepBar3, StepBar4, StepBar5 } from "./StepBar";
 import MinLevel from "./MinLevel";
 
 export default function InfoLevel({ item }) {
@@ -60,11 +60,36 @@ export default function InfoLevel({ item }) {
                     Level {item.lvl}
                   </Dialog.Title>
                   <div className="flex justify-center font-medium mt-2 text-md text-gray-500">
-                    {item.exp} XP
+                    {item.title} • {item.exp} XP
                   </div>
                   <div className="mt-6 w-full">
-                    <div className="rounded-md bg-gray-300 w-full h-2">
-                      <StepBar
+                    <div className="rounded-md bg-gray-300 w-full h-2"></div>
+                    <div className="flex items-center w-full -mt-2">
+                      <StepBar1
+                        item={{
+                          exp: item.exp,
+                          lvl: item.lvl,
+                        }}
+                      />
+                      <StepBar2
+                        item={{
+                          exp: item.exp,
+                          lvl: item.lvl,
+                        }}
+                      />
+                      <StepBar3
+                        item={{
+                          exp: item.exp,
+                          lvl: item.lvl,
+                        }}
+                      />
+                      <StepBar4
+                        item={{
+                          exp: item.exp,
+                          lvl: item.lvl,
+                        }}
+                      />
+                      <StepBar5
                         item={{
                           exp: item.exp,
                           lvl: item.lvl,
@@ -99,7 +124,7 @@ export default function InfoLevel({ item }) {
                         4000 XP
                       </div>
                     </div>
-                    <div className="flex justify-center mt-4">
+                    <div className="flex justify-center mt-4 w-full">
                       <MinLevel
                         item={{
                           exp: item.exp,

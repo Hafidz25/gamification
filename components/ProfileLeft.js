@@ -5,6 +5,7 @@ import ProgressBar from "./ProgressBar";
 
 export default function ProfileLeft({ props }) {
   const [level, setLevel] = useState(null);
+  const [title, setTitle] = useState(null);
 
   const userData = props.user.filter((obj) => {
     return obj.id === 2;
@@ -12,16 +13,21 @@ export default function ProfileLeft({ props }) {
   const data = userData[0];
 
   useEffect(() => {
-    if (data.exp_point < 250) {
+    if (data.exp_point < 251) {
       setLevel(1);
-    } else if (data.exp_point < 500) {
+      setTitle("Beginner");
+    } else if (data.exp_point < 501) {
       setLevel(2);
-    } else if (data.exp_point < 1000) {
+      setTitle("Good Student");
+    } else if (data.exp_point < 1001) {
       setLevel(3);
-    } else if (data.exp_point < 2000) {
+      setTitle("Diligent Student");
+    } else if (data.exp_point < 2001) {
       setLevel(4);
-    } else if (data.exp_point < 4000) {
+      setTitle("Smart Student");
+    } else if (data.exp_point < 4001) {
       setLevel(5);
+      setTitle("Expert");
     }
   }, []);
 
@@ -38,9 +44,11 @@ export default function ProfileLeft({ props }) {
           <div class="rounded-md font-medium font-Poppins mt-2 justify-self-center lg:justify-self-start">
             {data.username}
           </div>
-          <span class="rounded-md text-xs flex justify-self-center lg:justify-self-start font-Poppins">
-            Diligent Student
-          </span>
+          {title ? (
+            <span class="rounded-md text-xs flex justify-self-center lg:justify-self-start font-Poppins">
+              {title}
+            </span>
+          ) : null}
         </div>
         <div className="lg:col-span-2 py-2">
           <div class="rounded-md bg-red-500 flex justify-center text-white text-xs mt-2 p-2 cursor-pointer outline outline-1 transition duration-200 hover:outline-red-500 hover:bg-white hover:text-red-500 mr-2">
@@ -51,11 +59,12 @@ export default function ProfileLeft({ props }) {
       <div className="rounded-lg bg-white mx-1 lg:mx-1 px-4 py-6 mt-4 lg:mt-6 w-auto h-auto">
         <div className="flex items-center">
           <div class="rounded-md font-medium">Level {level}</div>
-          {level ? (
+          {level && title ? (
             <InfoLevel
               item={{
                 exp: data.exp_point,
                 lvl: level,
+                title: title,
               }}
             />
           ) : null}
