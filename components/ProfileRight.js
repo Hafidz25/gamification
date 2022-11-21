@@ -1,7 +1,7 @@
 import HistoryListProfile from "../components/HistoryListProfile";
 
 export default function ProfileRight({ props }) {
-  const userHistory = props.filter((obj) => {
+  const userHistory = props.user_transactions.filter((obj) => {
     return obj.user_id === 2;
   });
 
