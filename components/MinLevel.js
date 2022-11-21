@@ -25,8 +25,8 @@ export default function MinLevel({ item }) {
     <div className="flex justify-center mt-1">
       {min ? (
         <div style={{ fontSize: item.fontSize }} className="mt-1">
-          Kurang <span className="font-semibold">{min}XP</span> lagi untuk ke
-          level berikutnya
+          Kurang <span className="font-semibold text-blue-600">{min}XP</span>{" "}
+          lagi untuk ke level berikutnya
         </div>
       ) : null}
     </div>
