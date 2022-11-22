@@ -4,6 +4,17 @@ export default function ProfileRight({ props }) {
   const userHistory = props.user_transactions.filter((obj) => {
     return obj.user_id === 2;
   });
+  const userData = props.user.filter((obj) => {
+    return obj.id === 2;
+  });
+  const user = userData[0];
+  const badges = props.badges;
+
+  const filterBadges = badges.filter((obj) => {
+    return obj.act <= user.act_bc;
+  });
+
+  console.log(filterBadges);
 
   return (
     <div className="bg-gray-200 rounded-lg shadow-lg p-2 lg:p-6 h-full">
@@ -16,29 +27,10 @@ export default function ProfileRight({ props }) {
             </div>
           </a>
         </div>
-        <div className="grid justify-items-center grid-cols-4 lg:grid-cols-6 mt-4 gap-2 lg:gap-4 border-2 border-slate-300 p-2 lg:p-4 rounded-lg h-44 overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded">
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
-          <div className="bg-gray-400 w-12 h-12 rounded-full"></div>
+        <div className="grid justify-items-center grid-cols-5 mt-4 gap-2 lg:gap-4 border-2 border-slate-300 p-2 lg:p-4 rounded-lg h-44 overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded">
+          {badges.map((data) => {
+            return <img src={data.img} className="lg:w-14" />;
+          })}
         </div>
       </div>
       <div className="bg-white rounded-lg p-4 lg:p-6 w-full mt-2 lg:mt-6">

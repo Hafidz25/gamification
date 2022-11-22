@@ -14,13 +14,12 @@
             "id": 2,
             "username": "Hafidz Alif",
             "image": "/pp.png",
-            "bp_bc": 825,
-            "bp_dpr": 300,
-            "act_bc": 3,
-            "act_jp": 1,
-            "act_br": 4,
-            "act_bm": 2,
-            "act_ks": 0,
+            "user_point": 1,
+            "act_bc": 7,
+            "act_jp": 7,
+            "act_br": 7,
+            "act_bm": 7,
+            "act_ks": 7,
             "exp_point": 620,
             "status": 1,
             "created_at": "2022-7-11"
@@ -114,6 +113,128 @@
             "level": 5,
             "exp_limit": 4000,
             "exp_range": 2000
+        }
+    ],
+    "badges": [
+        {
+            "id": 1,
+            "name": "Berbagi Catatan",
+            "img": "/badges/starting/bc.png",
+            "act": 5 
+        },
+        {
+            "id": 2,
+            "name": "Baca Materi",
+            "img": "/badges/starting/bm.png",
+            "act": 5
+        },
+        {
+            "id": 3,
+            "name": "Buat Rumus",
+            "img": "/badges/starting/br.png",
+            "act": 5
+        },
+        {
+            "id": 4,
+            "name": "Jawab Pertanyaan",
+            "img": "/badges/starting/jp.png",
+            "act": 5
+        },
+        {
+            "id": 5,
+            "name": "Kerjakan Soal",
+            "img": "/badges/starting/ks.png",
+            "act": 5
+        },
+        {
+            "id": 6,
+            "name": "Berbagi Catatan",
+            "img": "/badges/active/bc.png",
+            "act": 10
+        },
+        {
+            "id": 7,
+            "name": "Baca Materi",
+            "img": "/badges/active/bm.png",
+            "act": 10
+        },
+        {
+            "id": 8,
+            "name": "Buat Rumus",
+            "img": "/badges/active/br.png",
+            "act": 10
+        },
+        {
+            "id": 9,
+            "name": "Jawab Pertanyaan",
+            "img": "/badges/active/jp.png",
+            "act": 10
+        },
+        {
+            "id": 10,
+            "name": "Kerjakan Soal",
+            "img": "/badges/active/ks.png",
+            "act": 10
+        },
+        {
+            "id": 11,
+            "name": "Berbagi Catatan",
+            "img": "/badges/profident/bc.png",
+            "act": 20
+        },
+        {
+            "id": 12,
+            "name": "Baca Materi",
+            "img": "/badges/profident/bm.png",
+            "act": 20
+        },
+        {
+            "id": 13,
+            "name": "Buat Rumus",
+            "img": "/badges/profident/br.png",
+            "act": 20
+        },
+        {
+            "id": 14,
+            "name": "Jawab Pertanyaan",
+            "img": "/badges/profident/jp.png",
+            "act": 20
+        },
+        {
+            "id": 15,
+            "name": "Kerjakan Soal",
+            "img": "/badges/profident/ks.png",
+            "act": 20
+        },
+        {
+            "id": 16,
+            "name": "Berbagi Catatan",
+            "img": "/badges/expert/bc.png",
+            "act": 40
+        },
+        {
+            "id": 17,
+            "name": "Baca Materi",
+            "img": "/badges/expert/bm.png",
+            "act": 40
+        },
+        {
+            "id": 18,
+            "name": "Buat Rumus",
+            "img": "/badges/expert/br.png",
+            "act": 40
+        },
+        {
+            "id": 19,
+            "name": "Jawab Pertanyaan",
+            "img": "/badges/expert/jp.png",
+            "act": 40
+        },
+        {
+            "id": 20,
+            "name": "Kerjakan Soal",
+            "img": "/badges/expert/ks.png",
+            "act": 40
         }
     ]
 }

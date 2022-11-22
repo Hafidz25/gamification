@@ -91,7 +91,7 @@ export default function ProfileLeft({ props }) {
         ) : null}
         <div className="grid lg:justify-center">
           {/* BadgeProfile */}
-          <div className="grid grid-cols-1 w-auto lg:grid-cols-12 gap-4 mt-6 lg:mt-10">
+          <div className="grid grid-cols-1 w-auto lg:grid-cols-12 gap-4 mt-6 lg:mt-8">
             {/* 1 */}
             <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-20 border-2 border-slate-300 cursor-default hover:bg-slate-200 transition duration-200 rounded-xl p-2 flex gap-2 items-center">
               <img src="/catatan-dibagikan.png" className="w-10 h-10" />
