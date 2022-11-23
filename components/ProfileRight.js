@@ -20,8 +20,6 @@ export default function ProfileRight({ props }) {
     return badge[0];
   });
 
-  console.log(filterBadges);
-
   return (
     <div className="bg-gray-200 rounded-lg shadow-lg p-2 lg:p-6 h-full">
       <div className="rounded-lg bg-white p-4 lg:p-6 w-full">

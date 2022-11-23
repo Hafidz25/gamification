@@ -1,7 +1,7 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 
-export default function BadgeCard() {
+export default function BadgeCard({ item }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
@@ -13,9 +13,9 @@ export default function BadgeCard() {
   }
 
   return (
-    <div className="bg-cyan-900 rounded-lg w-56 h-40 px-4 py-4 grid justify-items-center gap-2">
-      <div class="rounded-full bg-gray-200 w-20 h-20 lg:w-20 lg:h-20"></div>
-      {/* <div class="rounded-md bg-gray-200 font-mono w-30 h-5 lg:w-30 lg:h-5"></div> */}
+    <div className="bg-white rounded-lg w-56 h-40 px-4 py-4 grid justify-items-center gap-2">
+      {/* <div class="rounded-full bg-gray-200 w-20 h-20 lg:w-20 lg:h-20"></div> */}
+      <img src={item.img} className="w-20 h-20" />
       <button
         type="button"
         onClick={openModal}
@@ -58,22 +58,19 @@ export default function BadgeCard() {
                     as="h3"
                     className="text-lg font-medium text-center leading-6 text-gray-900"
                   >
-                    Badge Title
+                    {item.name}
                   </Dialog.Title>
                   <div className="flex justify-center mt-4">
-                    <div className="rounded-full bg-gray-200 flex items-center justify-center font-mono w-28 h-28 lg:w-28 lg:h-28"></div>
+                    {/* <div className="rounded-full bg-gray-200 flex items-center justify-center font-mono w-28 h-28 lg:w-28 lg:h-28"></div> */}
+                    <img src={item.img} className="w-28" />
                   </div>
-                  <div className="mt-4">
-                    <p className="text-sm text-gray-500 overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded prose h-32">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Blandit volutpat maecenas volutpat blandit aliquam
-                      etiam. Neque vitae tempus quam pellentesque nec nam
-                      aliquam sem.
+                  <div className="mt-4 flex justify-center">
+                    <p className="text-sm text-center text-gray-500 overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded prose h-32">
+                      {item.desc}.
                     </p>
                   </div>
 
-                  <div className="mt-4">
+                  <div className="-mt-4">
                     <button
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm hover:-translate-y-1 ease-in-out delay-150 font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition duration-300"

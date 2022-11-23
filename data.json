@@ -123,123 +123,143 @@
     "badges": [
         {
             "id": 1,
-            "name": "Berbagi Catatan",
+            "name": "Berbagi Catatan I",
             "img": "/badges/starting/bc.png",
-            "bp": 50 
+            "bp": 50,
+            "desc": "Badge ini didapatkan setelah mencapai 50 badge point"
         },
         {
             "id": 2,
-            "name": "Baca Materi",
+            "name": "Baca Materi I",
             "img": "/badges/starting/bm.png",
-            "bp": 50
+            "bp": 50,
+            "desc": "Badge ini didapatkan setelah mencapai 50 badge point"
         },
         {
             "id": 3,
-            "name": "Buat Rumus",
+            "name": "Buat Rumus I",
             "img": "/badges/starting/br.png",
-            "bp": 50
+            "bp": 50,
+            "desc": "Badge ini didapatkan setelah mencapai 50 badge point"
         },
         {
             "id": 4,
-            "name": "Jawab Pertanyaan",
+            "name": "Jawab Pertanyaan I",
             "img": "/badges/starting/jp.png",
-            "bp": 50
+            "bp": 50,
+            "desc": "Badge ini didapatkan setelah mencapai 50 badge point"
         },
         {
             "id": 5,
-            "name": "Kerjakan Soal",
+            "name": "Kerjakan Soal I",
             "img": "/badges/starting/ks.png",
-            "bp": 50
+            "bp": 50,
+            "desc": "Badge ini didapatkan setelah mencapai 50 badge point"
         },
         {
             "id": 6,
-            "name": "Berbagi Catatan",
+            "name": "Berbagi Catatan II",
             "img": "/badges/active/bc.png",
-            "bp": 100
+            "bp": 100,
+            "desc": "Badge ini didapatkan setelah mencapai 100 badge point"
         },
         {
             "id": 7,
-            "name": "Baca Materi",
+            "name": "Baca Materi II",
             "img": "/badges/active/bm.png",
-            "bp": 100
+            "bp": 100,
+            "desc": "Badge ini didapatkan setelah mencapai 100 badge point"
         },
         {
             "id": 8,
-            "name": "Buat Rumus",
+            "name": "Buat Rumus II",
             "img": "/badges/active/br.png",
-            "bp": 100
+            "bp": 100,
+            "desc": "Badge ini didapatkan setelah mencapai 100 badge point"
         },
         {
             "id": 9,
-            "name": "Jawab Pertanyaan",
+            "name": "Jawab Pertanyaan II",
             "img": "/badges/active/jp.png",
-            "bp": 100
+            "bp": 100,
+            "desc": "Badge ini didapatkan setelah mencapai 100 badge point"
         },
         {
             "id": 10,
-            "name": "Kerjakan Soal",
+            "name": "Kerjakan Soal II",
             "img": "/badges/active/ks.png",
-            "bp": 100
+            "bp": 100,
+            "desc": "Badge ini didapatkan setelah mencapai 100 badge point"
         },
         {
             "id": 11,
-            "name": "Berbagi Catatan",
+            "name": "Berbagi Catatan III",
             "img": "/badges/profident/bc.png",
-            "bp": 200
+            "bp": 200,
+            "desc": "Badge ini didapatkan setelah mencapai 200 badge point"
         },
         {
             "id": 12,
-            "name": "Baca Materi",
+            "name": "Baca Materi III",
             "img": "/badges/profident/bm.png",
-            "bp": 200
+            "bp": 200,
+            "desc": "Badge ini didapatkan setelah mencapai 200 badge point"
         },
         {
             "id": 13,
-            "name": "Buat Rumus",
+            "name": "Buat Rumus III",
             "img": "/badges/profident/br.png",
-            "bp": 200
+            "bp": 200,
+            "desc": "Badge ini didapatkan setelah mencapai 200 badge point"
         },
         {
             "id": 14,
-            "name": "Jawab Pertanyaan",
+            "name": "Jawab Pertanyaan III",
             "img": "/badges/profident/jp.png",
-            "bp": 200
+            "bp": 200,
+            "desc": "Badge ini didapatkan setelah mencapai 200 badge point"
         },
         {
             "id": 15,
-            "name": "Kerjakan Soal",
+            "name": "Kerjakan Soal III",
             "img": "/badges/profident/ks.png",
-            "bp": 200
+            "bp": 200,
+            "desc": "Badge ini didapatkan setelah mencapai 200 badge point"
         },
         {
             "id": 16,
-            "name": "Berbagi Catatan",
+            "name": "Berbagi Catatan IV",
             "img": "/badges/expert/bc.png",
-            "bp": 400
+            "bp": 400,
+            "desc": "Badge ini didapatkan setelah mencapai 400 badge point"
         },
         {
             "id": 17,
-            "name": "Baca Materi",
+            "name": "Baca Materi IV",
             "img": "/badges/expert/bm.png",
-            "bp": 400
+            "bp": 400,
+            "desc": "Badge ini didapatkan setelah mencapai 400 badge point"
         },
         {
             "id": 18,
-            "name": "Buat Rumus",
+            "name": "Buat Rumus IV",
             "img": "/badges/expert/br.png",
-            "bp": 400
+            "bp": 400,
+            "desc": "Badge ini didapatkan setelah mencapai 400 badge point"
         },
         {
             "id": 19,
-            "name": "Jawab Pertanyaan",
+            "name": "Jawab Pertanyaan IV",
             "img": "/badges/expert/jp.png",
-            "bp": 400
+            "bp": 400,
+            "desc": "Badge ini didapatkan setelah mencapai 400 badge point"
         },
         {
             "id": 20,
-            "name": "Kerjakan Soal",
+            "name": "Kerjakan Soal IV",
             "img": "/badges/expert/ks.png",
-            "bp": 400
+            "bp": 400,
+            "desc": "Badge ini didapatkan setelah mencapai 400 badge point"
         }
     ],
     "user_badges":[

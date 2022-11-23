@@ -3,8 +3,22 @@ import BadgeCard from "../components/BadgeCard";
 import BadgeCardRegular from "../components/BadgeCardRegular";
 import NavbarNew from "../components/NavbarNew";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import fsPromises from "fs/promises";
+import path from "path";
 
-export default function Badge() {
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), "data.json");
+  const jsonData = await fsPromises.readFile(filePath);
+  const objectData = JSON.parse(jsonData);
+
+  return {
+    props: objectData,
+  };
+}
+
+export default function Badge(props) {
+  const data = props;
+  const badges = props.badges;
   return (
     <div>
       <Head>
@@ -32,7 +46,7 @@ export default function Badge() {
             </h1>
           </div>
           {/* Features Badges */}
-          <div className="grid grid-cols-1 lg:grid-cols-10 gap-2 w-full mt-8">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-10 gap-2 w-full mt-8">
             <div className="col-span-2 flex justify-center">
               <BadgeCard />
             </div>
@@ -48,9 +62,9 @@ export default function Badge() {
             <div className="col-span-2 flex justify-center">
               <BadgeCard />
             </div>
-          </div>
+          </div> */}
           {/* LIne */}
-          <div class="inline-flex justify-center items-center w-full mt-8">
+          {/* <div class="inline-flex justify-center items-center w-full mt-8">
             <hr class="my-8 w-64 h-1 bg-gray-700 rounded border-0"></hr>
             <div class="absolute left-1/2 px-4 bg-gray-200 -translate-x-1/2">
               <svg
@@ -66,41 +80,16 @@ export default function Badge() {
                 />
               </svg>
             </div>
-          </div>
+          </div> */}
           {/* Regular Badges */}
-          <div className="grid grid-cols-1 lg:grid-cols-10 gap-2 w-full mt-8">
-            <div className="col-span-2 flex justify-center">
-              <BadgeCardRegular />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCardRegular />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCardRegular />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCardRegular />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCardRegular />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-10 gap-2 w-full mt-2">
-            <div className="col-span-2 flex justify-center">
-              <BadgeCardRegular />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCardRegular />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCardRegular />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCardRegular />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCardRegular />
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 w-full mt-8">
+            {badges.map((data) => (
+              <div className="flex justify-center">
+                <BadgeCard
+                  item={{ name: data.name, img: data.img, desc: data.desc }}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
