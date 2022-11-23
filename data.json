@@ -14,12 +14,17 @@
             "id": 2,
             "username": "Hafidz Alif",
             "image": "/pp.png",
-            "user_point": 1,
-            "act_bc": 7,
+            "user_point": 100,
+            "act_bc": 12,
             "act_jp": 7,
-            "act_br": 7,
-            "act_bm": 7,
-            "act_ks": 7,
+            "act_br": 15,
+            "act_bm": 11,
+            "act_ks": 13,
+            "bp_bc": 200,
+            "bp_jp": 100,
+            "bp_br": 500,
+            "bp_bm": 100,
+            "bp_ks": 300,
             "exp_point": 620,
             "status": 1,
             "created_at": "2022-7-11"
@@ -120,121 +125,153 @@
             "id": 1,
             "name": "Berbagi Catatan",
             "img": "/badges/starting/bc.png",
-            "act": 5 
+            "bp": 50 
         },
         {
             "id": 2,
             "name": "Baca Materi",
             "img": "/badges/starting/bm.png",
-            "act": 5
+            "bp": 50
         },
         {
             "id": 3,
             "name": "Buat Rumus",
             "img": "/badges/starting/br.png",
-            "act": 5
+            "bp": 50
         },
         {
             "id": 4,
             "name": "Jawab Pertanyaan",
             "img": "/badges/starting/jp.png",
-            "act": 5
+            "bp": 50
         },
         {
             "id": 5,
             "name": "Kerjakan Soal",
             "img": "/badges/starting/ks.png",
-            "act": 5
+            "bp": 50
         },
         {
             "id": 6,
             "name": "Berbagi Catatan",
             "img": "/badges/active/bc.png",
-            "act": 10
+            "bp": 100
         },
         {
             "id": 7,
             "name": "Baca Materi",
             "img": "/badges/active/bm.png",
-            "act": 10
+            "bp": 100
         },
         {
             "id": 8,
             "name": "Buat Rumus",
             "img": "/badges/active/br.png",
-            "act": 10
+            "bp": 100
         },
         {
             "id": 9,
             "name": "Jawab Pertanyaan",
             "img": "/badges/active/jp.png",
-            "act": 10
+            "bp": 100
         },
         {
             "id": 10,
             "name": "Kerjakan Soal",
             "img": "/badges/active/ks.png",
-            "act": 10
+            "bp": 100
         },
         {
             "id": 11,
             "name": "Berbagi Catatan",
             "img": "/badges/profident/bc.png",
-            "act": 20
+            "bp": 200
         },
         {
             "id": 12,
             "name": "Baca Materi",
             "img": "/badges/profident/bm.png",
-            "act": 20
+            "bp": 200
         },
         {
             "id": 13,
             "name": "Buat Rumus",
             "img": "/badges/profident/br.png",
-            "act": 20
+            "bp": 200
         },
         {
             "id": 14,
             "name": "Jawab Pertanyaan",
             "img": "/badges/profident/jp.png",
-            "act": 20
+            "bp": 200
         },
         {
             "id": 15,
             "name": "Kerjakan Soal",
             "img": "/badges/profident/ks.png",
-            "act": 20
+            "bp": 200
         },
         {
             "id": 16,
             "name": "Berbagi Catatan",
             "img": "/badges/expert/bc.png",
-            "act": 40
+            "bp": 400
         },
         {
             "id": 17,
             "name": "Baca Materi",
             "img": "/badges/expert/bm.png",
-            "act": 40
+            "bp": 400
         },
         {
             "id": 18,
             "name": "Buat Rumus",
             "img": "/badges/expert/br.png",
-            "act": 40
+            "bp": 400
         },
         {
             "id": 19,
             "name": "Jawab Pertanyaan",
             "img": "/badges/expert/jp.png",
-            "act": 40
+            "bp": 400
         },
         {
             "id": 20,
             "name": "Kerjakan Soal",
             "img": "/badges/expert/ks.png",
-            "act": 40
+            "bp": 400
+        }
+    ],
+    "user_badges":[
+        {
+            "id": 1,
+            "user_id": 2,
+            "badges_id": 1
+        },
+        {
+            "id": 2,
+            "user_id": 2,
+            "badges_id": 6
+        },
+        {
+            "id": 3,
+            "user_id": 2,
+            "badges_id": 11
+        },
+        {
+            "id": 4,
+            "user_id": 2,
+            "badges_id": 4
+        },
+        {
+            "id": 5,
+            "user_id": 2,
+            "badges_id": 9
+        },
+        {
+            "id": 6,
+            "user_id": 1,
+            "badges_id": 9
         }
     ]
 }

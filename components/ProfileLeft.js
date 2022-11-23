@@ -57,17 +57,25 @@ export default function ProfileLeft({ props }) {
         </div>
       </div>
       <div className="rounded-lg bg-white mx-1 lg:mx-1 px-4 py-6 mt-4 lg:mt-6 w-auto h-auto">
-        <div className="flex items-center">
-          <div class="rounded-md font-medium">Level {level}</div>
-          {level && title ? (
-            <InfoLevel
-              item={{
-                exp: data.exp_point,
-                lvl: level,
-                title: title,
-              }}
-            />
-          ) : null}
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <div class="rounded-md font-medium">Level {level}</div>
+            {level && title ? (
+              <InfoLevel
+                item={{
+                  exp: data.exp_point,
+                  lvl: level,
+                  title: title,
+                }}
+              />
+            ) : null}
+          </div>
+          <div className="flex items-center">
+            <img src="/coin.png" className="w-6 h-6" />
+            <div className="font-medium text-sm text-gray-900">
+              {data.user_point}
+            </div>
+          </div>
         </div>
         <span className="text-xs ml-2 mt-2">{data.exp_point} XP</span>
         <div class="rounded-md bg-gray-300 w-full h-3">
