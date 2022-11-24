@@ -101,62 +101,62 @@ export default function ProfileLeft({ props }) {
           {/* BadgeProfile */}
           <div className="grid grid-cols-1 w-auto lg:grid-cols-12 gap-4 mt-6 lg:mt-8">
             {/* 1 */}
-            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-20 border-2 border-slate-300 cursor-default hover:bg-slate-200 transition duration-200 rounded-xl p-2 flex gap-2 items-center">
+            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-20 border-2 border-slate-300 cursor-default hover:bg-red-100 transition duration-300 rounded-xl p-2 flex gap-2 items-center">
               <img src="/catatan-dibagikan.png" className="w-10 h-10" />
               <div className="flex items-center lg:items-start lg:flex-col gap-2 lg:gap-0 w-full">
-                <div className="text-sm lg:text-lg font-medium">
-                  {data.act_bc}
+                <div className="text-xs text-green-600 bg-green-200 rounded-lg p-1 flex justify-center w-32 lg:w-auto font-medium">
+                  {data.bp_bc} pts
                 </div>
                 <div className="text-sm lg:text-xs w-full font-medium lg:font-light tracking-tighter leading-none">
-                  Catatan dibagikan
+                  Berbagi Catatan
                 </div>
               </div>
             </div>
             {/* 3 */}
-            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-20 border-2 border-slate-300 cursor-default hover:bg-slate-200 transition duration-200 rounded-xl p-2 flex gap-2 items-center">
+            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-20 border-2 border-slate-300 cursor-default hover:bg-yellow-100 transition duration-300 rounded-xl p-2 flex gap-2 items-center">
               <img src="/pertanyaan-dijawab.png" className="w-10 h-10" />
               <div className="flex items-center lg:items-start lg:flex-col gap-2 lg:gap-0 w-full">
-                <div className="text-sm lg:text-lg font-medium">
-                  {data.act_jp}
+                <div className="text-xs text-green-600 bg-green-200 rounded-lg p-1 flex justify-center w-32 lg:w-auto font-medium">
+                  {data.bp_jp} pts
                 </div>
                 <div className="text-sm lg:text-xs w-full font-medium lg:font-light tracking-tighter leading-none">
-                  Pertanyaan dijawab
+                  Jawab Pertanyaan
                 </div>
               </div>
             </div>
             {/* 4 */}
-            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-20 border-2 border-slate-300 cursor-default hover:bg-slate-200 transition duration-200 rounded-xl p-2 flex gap-2 items-center">
+            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-20 border-2 border-slate-300 cursor-default hover:bg-blue-100 transition duration-300 rounded-xl p-2 flex gap-2 items-center">
               <img src="/buat-rumus.png" className="w-10 h-10" />
               <div className="flex items-center lg:items-start lg:flex-col gap-2 lg:gap-0 w-full">
-                <div className="text-sm lg:text-lg font-medium">
-                  {data.act_br}
+                <div className="text-xs text-green-600 bg-green-200 rounded-lg p-1 flex justify-center w-32 lg:w-auto font-medium">
+                  {data.bp_br} pts
                 </div>
                 <div className="text-sm lg:text-xs w-full font-medium lg:font-light tracking-tighter leading-none">
-                  Buat rumus
+                  Buat Rumus
                 </div>
               </div>
             </div>
             {/* 4 */}
-            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-20 border-2 border-slate-300 cursor-default hover:bg-slate-200 transition duration-200 rounded-xl p-2 flex gap-2 items-center">
+            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-20 border-2 border-slate-300 cursor-default hover:bg-slate-100 transition duration-300 rounded-xl p-2 flex gap-2 items-center">
               <img src="/materi-dibaca.png" className="w-10 h-10" />
               <div className="flex items-center lg:items-start lg:flex-col gap-2 lg:gap-0 w-full">
-                <div className="text-sm lg:text-lg font-medium">
-                  {data.act_bm}
+                <div className="text-xs text-green-600 bg-green-200 rounded-lg p-1 flex justify-center w-32 lg:w-auto font-medium">
+                  {data.bp_bm} pts
                 </div>
                 <div className="text-sm lg:text-xs w-full font-medium lg:font-light tracking-tighter leading-none">
-                  Materi dibaca
+                  Baca Materi
                 </div>
               </div>
             </div>
             {/* 5 */}
-            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-20 border-2 border-slate-300 cursor-default hover:bg-slate-200 transition duration-200 rounded-xl p-2 flex gap-2 items-center">
+            <div className="lg:col-span-6 w-full h-12 lg:w-32 lg:h-20 border-2 border-slate-300 cursor-default hover:bg-orange-100 transition duration-300 rounded-xl p-2 flex gap-2 items-center">
               <img src="/soal-dikerjakan.png" className="w-10 h-10" />
               <div className="flex items-center lg:items-start lg:flex-col gap-2 lg:gap-0 w-full">
-                <div className="text-sm lg:text-lg font-medium">
-                  {data.act_ks}
+                <div className="text-xs text-green-600 bg-green-200 rounded-lg p-1 flex justify-center w-32 lg:w-auto font-medium">
+                  {data.bp_ks} pts
                 </div>
                 <div className="text-sm lg:text-xs w-full font-medium lg:font-light tracking-tighter leading-none">
-                  Soal dikerjakan
+                  Kerjakan Soal
                 </div>
               </div>
             </div>

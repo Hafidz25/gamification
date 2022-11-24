@@ -85,8 +85,13 @@ export default function Badge(props) {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 w-full mt-8">
             {badges.map((data) => (
               <div className="flex justify-center">
-                <BadgeCard
-                  item={{ name: data.name, img: data.img, desc: data.desc }}
+                <BadgeCardRegular
+                  item={{
+                    name: data.name,
+                    img: data.img,
+                    desc: data.desc,
+                    bp: data.bp,
+                  }}
                 />
               </div>
             ))}
