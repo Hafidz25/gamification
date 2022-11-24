@@ -1,6 +1,6 @@
 export default function HistoryListProfile({ item }) {
   return (
-    <div className="rounded-lg bg-white border-2 border-slate-300 flex p-4 w-full lg:w-156 h-16 lg:h-16 px-2 lg:px-4 py-2 items-center">
+    <div className="rounded-lg bg-white border-2 border-slate-300 flex p-4 w-full h-16 lg:h-16 px-2 lg:px-4 py-2 items-center">
       <div className="grid grid-cols-12 lg:gap-2 w-full items-center">
         <div className="col-span-2 lg:col-span-1">
           {/* <div className="bg-gray-400 rounded-full w-10 h-10 lg:w-16 lg:h-16"></div> */}
