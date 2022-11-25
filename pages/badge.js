@@ -17,8 +17,31 @@ export async function getStaticProps() {
 }
 
 export default function Badge(props) {
-  const data = props;
+  const userData = props.user.filter((obj) => {
+    return obj.id === 2;
+  });
+  const user = userData[0];
   const badges = props.badges;
+  const userBadges = props.user_badges;
+
+  // const filterUser = userBadges.filter((obj) => {
+  //   return obj.user_id == user.id;
+  // });
+
+  const filterBadges = badges.map((data) => {
+    const filter = userBadges.filter((obj) => obj.user_id == user.id)
+    const status = filter.length > 0 ? filter.filter((obj) => obj.badges_id == data.id) : false
+    return {
+      id: data.id,
+      name: data.name,
+      img: data.img,
+      bp: data.bp,
+      desc: data.desc,
+      status: status.length > 0 ? true : false
+    }
+  })
+  console.log(filterBadges)
+
   return (
     <div>
       <Head>
@@ -83,7 +106,7 @@ export default function Badge(props) {
           </div> */}
           {/* Regular Badges */}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 w-full mt-8">
-            {badges.map((data) => (
+            {filterBadges.map((data) => (
               <div className="flex justify-center">
                 <BadgeCardRegular
                   item={{
@@ -91,6 +114,7 @@ export default function Badge(props) {
                     img: data.img,
                     desc: data.desc,
                     bp: data.bp,
+                    status: data.status,
                   }}
                 />
               </div>
