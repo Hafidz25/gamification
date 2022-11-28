@@ -10,9 +10,13 @@ export default function BadgeCardRegular({ item }) {
           </div>
         </div>
       </div>
-      {item.status == true ? (
-        <div className="flex justify-center items-center p-1 rounded-full bg-blue-200 text-xs font-medium text-blue-600 mt-1">Dimiliki</div>
-      ) : (
+      {item.status.is_owned == true ? <>
+        {item.status.is_claimed == true ? (
+          <div className="flex justify-center items-center p-1 rounded-full bg-blue-200 text-xs font-medium text-blue-600 mt-1">Dimiliki</div>
+        ) : (
+          <div className="flex justify-center items-center p-1 rounded-full cursor-pointer outline outline-1 outline-green-500 bg-white hover:bg-green-500 hover:text-white transition duration-200 text-xs font-medium text-green-600 mt-1">Claim</div>
+        )}
+      </> : (
         <div className="flex justify-center items-center p-1 rounded-full bg-gray-200 text-xs font-medium text-gray-600 mt-1">Terkunci</div>
       )}
     </div>

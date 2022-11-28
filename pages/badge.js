@@ -30,16 +30,23 @@ export default function Badge(props) {
 
   const filterBadges = badges.map((data) => {
     const filter = userBadges.filter((obj) => obj.user_id == user.id)
-    const status = filter.length > 0 ? filter.filter((obj) => obj.badges_id == data.id) : false
+    const ownedBadges = filter.length > 0 ? filter.filter((obj) => obj.badges_id == data.id) : false
+    const claimedBadges = ownedBadges.map((data) => data.is_claimed)
+    const cekStatus = ownedBadges.length > 0 ? true : false
+    const cekClaim = claimedBadges == 1 ? true : false
     return {
       id: data.id,
       name: data.name,
       img: data.img,
       bp: data.bp,
       desc: data.desc,
-      status: status.length > 0 ? true : false
+      status: {
+        is_owned: cekStatus,
+        is_claimed: cekClaim
+      }
     }
   })
+
   console.log(filterBadges)
 
   return (
