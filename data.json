@@ -15,11 +15,6 @@
             "username": "Hafidz Alif",
             "image": "/pp.png",
             "user_point": 100,
-            "act_bc": 12,
-            "act_jp": 7,
-            "act_br": 15,
-            "act_bm": 11,
-            "act_ks": 13,
             "bp_bc": 200,
             "bp_jp": 100,
             "bp_br": 500,
@@ -86,38 +81,6 @@
             "point_change": 50,
             "status": 0,
             "created_at":"2022-11-14"
-        }
-    ],
-    "level": [
-        {
-            "id": 1,
-            "level": 1,
-            "exp_limit": 250,
-            "exp_range": 250
-        },
-        {
-            "id": 2,
-            "level": 2,
-            "exp_limit": 500,
-            "exp_range": 250
-        },
-        {
-            "id": 3,
-            "level": 3,
-            "exp_limit": 1000,
-            "exp_range": 500
-        },
-        {
-            "id": 4,
-            "level": 4,
-            "exp_limit": 2000,
-            "exp_range": 1000
-        },
-        {
-            "id": 5,
-            "level": 5,
-            "exp_limit": 4000,
-            "exp_range": 2000
         }
     ],
     "badges": [

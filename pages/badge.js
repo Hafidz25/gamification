@@ -47,7 +47,7 @@ export default function Badge(props) {
     }
   })
 
-  console.log(filterBadges)
+  // console.log(filterBadges)
 
   return (
     <div>
