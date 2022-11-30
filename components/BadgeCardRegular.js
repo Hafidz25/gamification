@@ -71,14 +71,14 @@ export default function BadgeCardRegular({ item }) {
       <div className="flex w-full mt-2">
         {item.status.is_owned == true ? <>
           {item.status.is_claimed == true ? (
-            <div className="flex w-3/4 justify-center items-center p-1 rounded-md bg-blue-200 text-xs font-medium text-blue-600">Dimiliki</div>
+            <div className="flex w-3/4 lg:h-8 justify-center items-center p-1 rounded-md bg-blue-200 text-xs font-medium text-blue-600">Dimiliki</div>
           ) : (
-            <div className="flex w-3/4 justify-center items-center p-1 rounded-md cursor-pointer bg-green-200 hover:bg-green-400 hover:text-white transition duration-200 text-xs font-medium text-green-600">Claim</div>
+            <div className="flex w-3/4 lg:h-8 justify-center items-center p-1 rounded-md cursor-pointer bg-green-200 hover:bg-green-400 hover:text-white transition duration-200 text-xs font-medium text-green-600">Claim</div>
           )}
         </> : (
-          <div className="flex w-3/4 justify-center items-center p-1 rounded-md bg-gray-200 text-xs font-medium text-gray-600">Terkunci</div>
+          <div className="flex w-3/4 lg:h-8 justify-center items-center p-1 rounded-md bg-gray-200 text-xs font-medium text-gray-600">Terkunci</div>
         )}
-        <div onClick={openModal} className="flex w-1/4 ml-1 justify-center items-center p-1 rounded-md cursor-pointer bg-blue-200 hover:bg-blue-400 hover:text-white transition duration-200 text-xs font-medium text-blue-600">Info</div>
+        <div onClick={openModal} className="flex w-1/4 ml-1 justify-center items-center p-1 rounded-md cursor-pointer bg-blue-200 hover:bg-blue-400 transition duration-200 text-xs font-medium text-blue-800">Info</div>
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog
             as="div"
@@ -128,7 +128,7 @@ export default function BadgeCardRegular({ item }) {
                     <div className="flex justify-end">
                       <button
                         type="button"
-                        className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm hover:-translate-y-1 ease-in-out delay-150 font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition duration-300"
+                        className="inline-flex justify-center rounded-md bg-blue-100 px-4 py-2 text-sm hover:-translate-y-1 ease-in-out delay-150 font-medium text-blue-900 hover:bg-blue-200 transition duration-300"
                         onClick={closeModal}
                       >
                         Got it, thanks!

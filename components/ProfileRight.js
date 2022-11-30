@@ -33,7 +33,9 @@ export default function ProfileRight({ props }) {
         </div>
         <div className="grid justify-items-center grid-cols-5 gap-2 lg:gap-4 border-2 border-slate-300 p-2 lg:p-4 rounded-lg h-44 overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded mt-4">
           {filterBadges.map((data) => {
-            return <img src={data.img} alt={data.name} className="lg:w-14" />;
+            return (
+              <img src={data.img} alt={data.name} className="lg:w-14" />
+            );
           })}
         </div>
       </div>
