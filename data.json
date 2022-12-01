@@ -230,36 +230,48 @@
             "id": 1,
             "user_id": 2,
             "badges_id": 1,
+            "badges_name": "Berbagi Catatan I",
+            "badges_img": "/badges/starting/bc.png",
             "is_claimed": 1
         },
         {
             "id": 2,
             "user_id": 2,
             "badges_id": 6,
+            "badges_name": "Berbagi Catatan II",
+            "badges_img": "/badges/active/bc.png",
             "is_claimed": 1
         },
         {
             "id": 3,
             "user_id": 2,
             "badges_id": 11,
+            "badges_name": "Berbagi Catatan III",
+            "badges_img": "/badges/profident/bc.png",
             "is_claimed": 0
         },
         {
             "id": 4,
             "user_id": 2,
             "badges_id": 4,
+            "badges_name": "Jawab Pertanyaan I",
+            "badges_img": "/badges/starting/jp.png",
             "is_claimed": 1
         },
         {
             "id": 5,
             "user_id": 2,
             "badges_id": 9,
+            "badges_name": "Jawab Pertanyaan II",
+            "badges_img": "/badges/active/jp.png",
             "is_claimed": 0
         },
         {
             "id": 6,
             "user_id": 1,
             "badges_id": 9,
+            "badges_name": "Jawab Pertanyaan II",
+            "badges_img": "/badges/active/jp.png",
             "is_claimed": 1
         }
     ]

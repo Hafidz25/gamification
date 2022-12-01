@@ -13,57 +13,12 @@ export default function BadgeCardRegular({ item }) {
   }
 
   return (
-    // <>
-    //   {item.status.is_owned == true ? <>
-    //     {item.status.is_claimed == true ? (
-    //       <div className="bg-white rounded-lg w-56 p-4 grid">
-    //         <div className="flex items-center gap-4">
-    //           <img src={item.img} className="w-20" />
-    //           <div className="flex-col">
-    //             <div className="font-medium text-sm">{item.name}</div>
-    //             <div className="font-medium w-20 mt-1 flex justify-center bg-green-200 p-1 rounded-full text-xs text-green-600">
-    //               {item.bp} point
-    //             </div>
-    //           </div>
-    //         </div>
-    //         <div className="flex justify-center items-center p-1 rounded-full bg-blue-200 text-xs font-medium text-blue-600 mt-1">Dimiliki</div>
-    //       </div>
-    //     ) : (
-    //       <div className="bg-white rounded-lg w-56 p-4 grid">
-    //         <div className="flex items-center gap-4">
-    //           <img src={item.img} className="w-20" />
-    //           <div className="flex-col">
-    //             <div className="font-medium text-sm">{item.name}</div>
-    //             <div className="font-medium w-20 mt-1 flex justify-center bg-green-200 p-1 rounded-full text-xs text-green-600">
-    //               {item.bp} point
-    //             </div>
-    //           </div>
-    //         </div>
-    //         <div className="flex justify-center items-center p-1 rounded-full cursor-pointer bg-green-200 hover:bg-green-500 hover:text-white transition duration-200 text-xs font-medium text-green-600 mt-1">Claim</div>
-    //       </div>
-    //     )}
-    //   </> : (
-    //     <div className="bg-white rounded-lg w-56 p-4 grid">
-    //       <div className="flex items-center gap-4">
-    //         <img src={item.img} className="w-20" />
-    //         <div className="flex-col">
-    //           <div className="font-medium text-sm">{item.name}</div>
-    //           <div className="font-medium w-20 mt-1 flex justify-center bg-green-200 p-1 rounded-full text-xs text-green-600">
-    //             {item.bp} point
-    //           </div>
-    //         </div>
-    //       </div>
-    //       <div className="flex justify-center items-center p-1 rounded-full bg-gray-200 text-xs font-medium text-gray-600 mt-1">Terkunci</div>
-    //     </div>
-
-    //   )}
-    // </>
     <div className="bg-white rounded-lg w-56 p-4 grid">
       <div className="flex items-center gap-4">
-        <img src={item.img} className="w-20" />
+        <img src={item.img} className="w-12 lg:w-20" />
         <div className="flex-col">
-          <div className="font-medium text-sm">{item.name}</div>
-          <div className="font-medium w-20 mt-1 flex justify-center bg-green-200 p-1 rounded-full text-xs text-green-600">
+          <div className="font-medium text-xs lg:text-sm">{item.name}</div>
+          <div className="font-medium w-auto mt-1 flex justify-center bg-green-200 p-1 rounded-full text-xs text-green-600">
             {item.bp} point
           </div>
         </div>
@@ -71,14 +26,14 @@ export default function BadgeCardRegular({ item }) {
       <div className="flex w-full mt-2">
         {item.status.is_owned == true ? <>
           {item.status.is_claimed == true ? (
-            <div className="flex w-3/4 lg:h-8 justify-center items-center p-1 rounded-md bg-blue-200 text-xs font-medium text-blue-600">Dimiliki</div>
+            <div className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md bg-blue-200 text-xs font-medium text-blue-600">Dimiliki</div>
           ) : (
-            <div className="flex w-3/4 lg:h-8 justify-center items-center p-1 rounded-md cursor-pointer bg-green-200 hover:bg-green-400 hover:text-white transition duration-200 text-xs font-medium text-green-600">Claim</div>
+            <div className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md cursor-pointer bg-green-200 hover:bg-green-400 hover:text-white transition duration-200 text-xs font-medium text-green-600">Claim</div>
           )}
         </> : (
-          <div className="flex w-3/4 lg:h-8 justify-center items-center p-1 rounded-md bg-gray-200 text-xs font-medium text-gray-600">Terkunci</div>
+          <div className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md bg-gray-200 text-xs font-medium text-gray-600">Terkunci</div>
         )}
-        <div onClick={openModal} className="flex w-1/4 ml-1 justify-center items-center p-1 rounded-md cursor-pointer bg-blue-200 hover:bg-blue-400 transition duration-200 text-xs font-medium text-blue-800">Info</div>
+        <div onClick={openModal} className="flex w-2/5 h-6 lg:h-8 ml-1 justify-center items-center p-1 rounded-md cursor-pointer bg-blue-200 hover:bg-blue-300 transition duration-200 text-xs font-medium text-blue-800">Info</div>
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog
             as="div"

@@ -11,14 +11,16 @@ export default function ProfileRight({ props }) {
   const badges = props.badges;
   const userBadges = props.user_badges;
 
-  const filterUser = userBadges.filter((obj) => {
-    return obj.user_id == user.id;
+  const filterBadges = userBadges.filter((obj) => {
+    return obj.user_id == user.id && obj.is_claimed == 1;
   });
 
-  const filterBadges = filterUser.map((data) => {
-    const badge = badges.filter((obj) => obj.id == data.badges_id);
-    return badge[0];
-  });
+  // const filterBadges = filterUser.map((data) => {
+  //   const badge = filterUser.filter((obj) => obj.is_claimed == 1);
+  //   return badge[0];
+  // });
+
+  console.log(filterBadges)
 
   return (
     <div className="bg-gray-200 rounded-lg shadow-lg p-2 lg:p-6 h-full">
@@ -34,7 +36,7 @@ export default function ProfileRight({ props }) {
         <div className="grid justify-items-center grid-cols-5 gap-2 lg:gap-4 border-2 border-slate-300 p-2 lg:p-4 rounded-lg h-44 overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded mt-4">
           {filterBadges.map((data) => {
             return (
-              <img src={data.img} alt={data.name} className="lg:w-14" />
+              <img src={data.badges_img} alt={data.badges_name} className="lg:w-14" />
             );
           })}
         </div>

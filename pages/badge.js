@@ -47,7 +47,7 @@ export default function Badge(props) {
     }
   })
 
-  // console.log(filterBadges)
+  console.log(filterBadges)
 
   return (
     <div>
@@ -112,7 +112,7 @@ export default function Badge(props) {
             </div>
           </div> */}
           {/* Regular Badges */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-2 w-full mt-8">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 w-full mt-8">
             {filterBadges.map((data) => (
               <div className="flex justify-center">
                 <BadgeCardRegular
