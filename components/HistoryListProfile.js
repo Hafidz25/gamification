@@ -1,4 +1,5 @@
 export default function HistoryListProfile({ item }) {
+  const date = item.date.slice(0, 10)
   return (
     <div className="rounded-lg bg-white border-2 border-slate-300 flex p-4 w-full h-16 lg:h-16 px-2 lg:px-4 py-2 items-center">
       <div className="grid grid-cols-12 lg:gap-2 w-full items-center">
@@ -33,8 +34,8 @@ export default function HistoryListProfile({ item }) {
               )}
             </div>
             <div className="rounded-md w-20 lg:w-24 lg:h-4 mt-0">
-              <span className="text-xs font-thin lg:text-sm text-slate-600">
-                {item.date}
+              <span className="text-xs font-thin lg:text-sm text-slate-600" style={{ maxLength: '12' }}>
+                {date}
               </span>
             </div>
           </div>

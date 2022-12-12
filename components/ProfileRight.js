@@ -1,26 +1,12 @@
 import HistoryListProfile from "../components/HistoryListProfile";
 
 export default function ProfileRight({ props }) {
-  const userHistory = props.user_transactions.filter((obj) => {
-    return obj.user_id === 2;
-  });
-  const userData = props.user.filter((obj) => {
-    return obj.id === 2;
-  });
-  const user = userData[0];
-  const badges = props.badges;
-  const userBadges = props.user_badges;
+  const userHistory = props.user_transaction.data
+  const userBadges = props.badges.data;
 
   const filterBadges = userBadges.filter((obj) => {
-    return obj.user_id == user.id && obj.is_claimed == 1;
+    return obj.is_claimed == 1;
   });
-
-  // const filterBadges = filterUser.map((data) => {
-  //   const badge = filterUser.filter((obj) => obj.is_claimed == 1);
-  //   return badge[0];
-  // });
-
-  console.log(filterBadges)
 
   return (
     <div className="bg-gray-200 rounded-lg shadow-lg p-2 lg:p-6 h-full">
@@ -51,7 +37,7 @@ export default function ProfileRight({ props }) {
           </a>
         </div>
         <div className="overflow-y-auto h-36 w-full lg:scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollbar-thumb-rounded grid gap-2 lg:gap-4 mt-2 lg:mt-6">
-          {userHistory.map((data) => (
+          {userHistory.slice(0, 3).map((data) => (
             <HistoryListProfile
               item={{
                 point_change: data.point_change,

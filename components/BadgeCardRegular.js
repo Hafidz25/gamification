@@ -1,8 +1,13 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
+import { useRouter } from 'next/router'
 
 export default function BadgeCardRegular({ item }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  // const claim = (id) => {
+  //   fetch(process.env.NEXT_PUBLIC_APIURL + `/api/user_badges/claim/${id}`)
+  // }
 
   function closeModal() {
     setIsOpen(false);
@@ -13,7 +18,7 @@ export default function BadgeCardRegular({ item }) {
   }
 
   return (
-    <div className="bg-white rounded-lg w-56 p-4 grid">
+    <div className="bg-white rounded-lg w-56 p-4 grid" key={item.id}>
       <div className="flex items-center gap-4">
         <img src={item.img} className="w-12 lg:w-20" />
         <div className="flex-col">
@@ -26,12 +31,13 @@ export default function BadgeCardRegular({ item }) {
       <div className="flex w-full mt-2">
         {item.status.is_owned == true ? <>
           {item.status.is_claimed == true ? (
-            <div className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md bg-blue-200 text-xs font-medium text-blue-600">Dimiliki</div>
+            <div className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md bg-blue-300 text-xs font-medium text-blue-600">Dimiliki</div>
           ) : (
-            <div className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md cursor-pointer bg-green-200 hover:bg-green-400 hover:text-white transition duration-200 text-xs font-medium text-green-600">Claim</div>
+            <a href='/badge' className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md cursor-pointer bg-green-300 hover:bg-green-400 hover:text-white transition duration-200 text-xs font-medium text-green-600"
+              onClick={() => { fetch(process.env.NEXT_PUBLIC_APIURL + `/api/user_badges/claim/${item.id}`) }}>Claim</a>
           )}
         </> : (
-          <div className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md bg-gray-200 text-xs font-medium text-gray-600">Terkunci</div>
+          <div className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md bg-gray-300 text-xs font-medium text-gray-600">Terkunci</div>
         )}
         <div onClick={openModal} className="flex w-2/5 h-6 lg:h-8 ml-1 justify-center items-center p-1 rounded-md cursor-pointer bg-blue-200 hover:bg-blue-300 transition duration-200 text-xs font-medium text-blue-800">Info</div>
         <Transition appear show={isOpen} as={Fragment}>

@@ -3,24 +3,20 @@ import { useState, useEffect } from "react";
 import HistoryList from "../components/HistoryList";
 import NavbarNew from "../components/NavbarNew";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
-import fsPromises from "fs/promises";
-import path from "path";
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "data.json");
-  const jsonData = await fsPromises.readFile(filePath);
-  const objectData = JSON.parse(jsonData);
+  const idUser = 1
+
+  const reqUserTransaction = await fetch(process.env.NEXT_PUBLIC_APIURL + `/api/ustrans/user_id/${idUser}?order_by=`)
+  const user_transaction = await reqUserTransaction.json()
 
   return {
-    props: objectData,
+    props: user_transaction
   };
 }
 
 export default function History(props) {
-  const userTrans = props.user_transactions;
-  const userHistory = userTrans.filter((obj) => {
-    return obj.user_id === 2;
-  });
+  const userHistory = props.data
 
   return (
     <div>
@@ -48,7 +44,7 @@ export default function History(props) {
               History
             </h1>
           </div>
-          <div className="overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 scrollbar-thumb-rounded grid gap-2 lg:gap-8 mt-4 lg:mt-8">
+          <div className="overflow-y-auto lg:scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100 scrollbar-thumb-rounded grid gap-2 lg:gap-4 mt-4 lg:mt-8">
             {userHistory.map((data) => (
               <HistoryList
                 item={{

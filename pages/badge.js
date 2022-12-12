@@ -3,37 +3,32 @@ import BadgeCard from "../components/BadgeCard";
 import BadgeCardRegular from "../components/BadgeCardRegular";
 import NavbarNew from "../components/NavbarNew";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
-import fsPromises from "fs/promises";
-import path from "path";
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "data.json");
-  const jsonData = await fsPromises.readFile(filePath);
-  const objectData = JSON.parse(jsonData);
+  const idUser = 1
+
+  const reqBadges = await fetch(process.env.NEXT_PUBLIC_APIURL + `/api/badges`)
+  const badges = await reqBadges.json()
+
+  const reqUserBadges = await fetch(process.env.NEXT_PUBLIC_APIURL + `/api/user_badges/user_id/${idUser}`)
+  const userBadges = await reqUserBadges.json()
 
   return {
-    props: objectData,
+    props: { badges: badges.data, userBadges: userBadges.data }
   };
 }
 
 export default function Badge(props) {
-  const userData = props.user.filter((obj) => {
-    return obj.id === 2;
-  });
-  const user = userData[0];
   const badges = props.badges;
-  const userBadges = props.user_badges;
+  const userBadges = props.userBadges;
 
-  // const filterUser = userBadges.filter((obj) => {
-  //   return obj.user_id == user.id;
-  // });
 
   const filterBadges = badges.map((data) => {
-    const filter = userBadges.filter((obj) => obj.user_id == user.id)
-    const ownedBadges = filter.length > 0 ? filter.filter((obj) => obj.badges_id == data.id) : false
+    const ownedBadges = userBadges.length > 0 ? userBadges.filter((obj) => obj.badge_id == data.id) : 0
     const claimedBadges = ownedBadges.map((data) => data.is_claimed)
     const cekStatus = ownedBadges.length > 0 ? true : false
     const cekClaim = claimedBadges == 1 ? true : false
+
     return {
       id: data.id,
       name: data.name,
@@ -47,7 +42,7 @@ export default function Badge(props) {
     }
   })
 
-  console.log(filterBadges)
+  // console.log(filterBadges)
 
   return (
     <div>
@@ -75,48 +70,12 @@ export default function Badge(props) {
               Badges
             </h1>
           </div>
-          {/* Features Badges */}
-          {/* <div className="grid grid-cols-1 lg:grid-cols-10 gap-2 w-full mt-8">
-            <div className="col-span-2 flex justify-center">
-              <BadgeCard />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCard />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCard />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCard />
-            </div>
-            <div className="col-span-2 flex justify-center">
-              <BadgeCard />
-            </div>
-          </div> */}
-          {/* LIne */}
-          {/* <div class="inline-flex justify-center items-center w-full mt-8">
-            <hr class="my-8 w-64 h-1 bg-gray-700 rounded border-0"></hr>
-            <div class="absolute left-1/2 px-4 bg-gray-200 -translate-x-1/2">
-              <svg
-                aria-hidden="true"
-                class="w-5 h-5 text-gray-700 dark:text-gray-300"
-                viewBox="0 0 24 27"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </div>
-          </div> */}
-          {/* Regular Badges */}
           <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 w-full mt-8">
             {filterBadges.map((data) => (
               <div className="flex justify-center">
                 <BadgeCardRegular
                   item={{
+                    id: data.id,
                     name: data.name,
                     img: data.img,
                     desc: data.desc,

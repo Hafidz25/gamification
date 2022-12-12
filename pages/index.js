@@ -2,21 +2,27 @@ import Head from "next/head";
 import NavbarNew from "../components/NavbarNew";
 import ProfileLeft from "../components/ProfileLeft";
 import ProfileRight from "../components/ProfileRight";
-import fsPromises from "fs/promises";
-import path from "path";
 
 export async function getStaticProps() {
-  const filePath = path.join(process.cwd(), "data.json");
-  const jsonData = await fsPromises.readFile(filePath);
-  const objectData = JSON.parse(jsonData);
+  const idUser = 1
+
+  const reqUser = await fetch(process.env.NEXT_PUBLIC_APIURL + `/api/user/${idUser}`)
+  const user = await reqUser.json()
+
+  const reqBadges = await fetch(process.env.NEXT_PUBLIC_APIURL + `/api/user_badges/user_id/${idUser}`)
+  const badges = await reqBadges.json()
+
+  const reqUserTransaction = await fetch(process.env.NEXT_PUBLIC_APIURL + `/api/ustrans/user_id/${idUser}?order_by=`)
+  const user_transaction = await reqUserTransaction.json()
 
   return {
-    props: objectData,
+    props: { user: user, badges: badges, user_transaction: user_transaction }
   };
 }
 
 export default function Index(props) {
   const data = props;
+  // console.log(data)
   return (
     <div>
       <Head>

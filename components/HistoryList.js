@@ -1,4 +1,5 @@
 export default function HistoryList({ item }) {
+  const date = item.date.slice(0, 10)
   return (
     <div className="rounded-lg bg-white border-2 border-slate-300 flex p-4 w-full h-20 px-4 lg:px-6 py-4 items-center">
       <div className="grid grid-cols-12 lg:gap-2 w-full items-center">
@@ -34,7 +35,7 @@ export default function HistoryList({ item }) {
             </div>
             <div className="rounded-md w-20 h-2 lg:w-24 lg:h-4 mt-0 lg:mt-1">
               <span className="text-xs font-thin lg:text-sm text-slate-600">
-                {item.date}
+                {date}
               </span>
             </div>
           </div>

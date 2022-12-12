@@ -7,10 +7,7 @@ export default function ProfileLeft({ props }) {
   const [level, setLevel] = useState(null);
   const [title, setTitle] = useState(null);
 
-  const userData = props.user.filter((obj) => {
-    return obj.id === 2;
-  });
-  const data = userData[0];
+  const data = props.user.data[0]
 
   useEffect(() => {
     if (data.exp_point < 251) {
@@ -37,7 +34,7 @@ export default function ProfileLeft({ props }) {
         <div className="items-center justify-center flex lg:col-span-4">
           {/* Profile Picture */}
           {/* <div class="rounded-full bg-gray-200 flex items-center justify-center font-mono w-32 h-32 lg:w-20 lg:h-20"></div> */}
-          <img src={data.image} className="w-32 h-32 lg:w-20 lg:h-20" />
+          <img src='/pp.png' className="w-32 h-32 lg:w-20 lg:h-20" />
         </div>
         <div className="lg:col-span-6 py-2 grid justify-items-stretch">
           {/* Username */}
