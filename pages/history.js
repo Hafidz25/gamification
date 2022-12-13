@@ -30,7 +30,7 @@ export default function History(props) {
         </div>
       </div>
       <div className="container mx-auto px-4 lg:px-10 mt-16 lg:mt-24 mb-8 py-4">
-        <div className="bg-gray-200 rounded-lg w-full h-156 lg:h-128 p-2 lg:p-6 shadow-lg grid">
+        <div className="bg-gray-200 rounded-lg w-full h-156 lg:h-136 p-2 lg:p-6 shadow-lg grid">
           <div className="rounded-lg bg-white flex items-center px-4 w-full lg:p-8">
             <a href="/">
               <button

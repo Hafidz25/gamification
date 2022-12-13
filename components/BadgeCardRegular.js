@@ -33,7 +33,7 @@ export default function BadgeCardRegular({ item }) {
           {item.status.is_claimed == true ? (
             <div className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md bg-blue-300 text-xs font-medium text-blue-600">Dimiliki</div>
           ) : (
-            <a href='/badge' className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md cursor-pointer bg-green-300 hover:bg-green-400 hover:text-white transition duration-200 text-xs font-medium text-green-600"
+            <a href='/badge' className="flex w-3/5 h-6 lg:h-8 justify-center items-center p-1 rounded-md cursor-pointer bg-green-300 hover:bg-green-400 hover:text-white transition duration-100 text-xs font-medium text-green-600"
               onClick={() => { fetch(process.env.NEXT_PUBLIC_APIURL + `/api/user_badges/claim/${item.id}`) }}>Claim</a>
           )}
         </> : (
